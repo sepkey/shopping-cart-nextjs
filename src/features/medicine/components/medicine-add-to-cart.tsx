@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cart-store";
 import { Plus } from "lucide-react";
-import { useState } from "react";
 import { Medicine } from "../types";
 
 type MedicineAddToCartProps = { medicine: Medicine };
@@ -10,12 +9,12 @@ type MedicineAddToCartProps = { medicine: Medicine };
 export default function MedicineAddToCart({
   medicine,
 }: MedicineAddToCartProps) {
-  const [isAdded, setIsAdded] = useState(false);
+  //   const [isAdded, setIsAdded] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
 
   const handleAddToCart = async () => {
-    addItem(medicine.id);
-    setIsAdded(true);
+    addItem(medicine);
+    // setIsAdded(true);
   };
   return (
     <Button
@@ -23,7 +22,7 @@ export default function MedicineAddToCart({
       variant="ghost"
       onClick={handleAddToCart}
       className="text-indigo-800 font-semibold self-end"
-      disabled={isAdded}
+      //   disabled={isAdded}
     >
       افزودن
       <Plus className="h-5 w-5" />
