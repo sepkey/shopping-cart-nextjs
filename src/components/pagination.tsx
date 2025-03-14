@@ -18,7 +18,6 @@ export default function Pagination({
 }: PaginationProps) {
   const totalPages = Math.ceil(count / pagination.size);
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-  console.log(pagination, "stop");
 
   const handlePreviousPage = () => {
     onPagination({ ...pagination, page: pagination.page - 1 });

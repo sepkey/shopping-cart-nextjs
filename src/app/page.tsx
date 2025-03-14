@@ -1,5 +1,5 @@
-import MedicineList from "@/features/medicine/components/medicine-list";
 import Spinner from "@/components/ui/spinner";
+import MedicineList from "@/features/medicine/components/medicine-list";
 import { searchParamsCache } from "@/lib/search-params";
 import { SearchParams } from "nuqs";
 import { Suspense } from "react";
