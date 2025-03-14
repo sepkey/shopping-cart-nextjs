@@ -2,6 +2,7 @@
 
 import Placeholder from "@/components/placeholder";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { homePath } from "@/paths";
 import { useCartStore } from "@/store/cart-store";
 import { MessageSquareWarning } from "lucide-react";
@@ -9,7 +10,7 @@ import Link from "next/link";
 import CartItem from "./cart-item";
 
 export default function CartList() {
-  const items = useCartStore((state) => state.items);
+  const { items, totalPrice } = useCartStore();
 
   if (items.length === 0) {
     return (
@@ -29,6 +30,12 @@ export default function CartList() {
       {items.map((item) => (
         <CartItem key={item.id} item={item} />
       ))}
+
+      <Separator className="mt-8" />
+      <div className="flex justify-between items-center ">
+        <div className="">جمع کل</div>
+        <div className="">{totalPrice().toLocaleString()} تومان</div>
+      </div>
     </div>
   );
 }

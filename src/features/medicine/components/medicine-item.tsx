@@ -1,6 +1,5 @@
 "use client";
 
-// import { useCartStore } from "@/store/cart-store";
 import Image from "next/image";
 import type { Medicine } from "../types";
 import MedicineAddToCart from "./medicine-add-to-cart";

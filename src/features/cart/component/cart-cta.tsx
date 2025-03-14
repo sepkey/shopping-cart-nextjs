@@ -5,8 +5,7 @@ import { useCartStore } from "@/store/cart-store";
 import Link from "next/link";
 
 export default function CartCta() {
-  const items = useCartStore((state) => state.items);
-  const clearCart = useCartStore((state) => state.clearCart);
+  const { items, clearCart } = useCartStore();
 
   if (items.length === 0) return null;
   return (
