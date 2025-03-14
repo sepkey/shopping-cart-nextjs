@@ -1,11 +1,11 @@
 "use client";
 
-import { Medicine } from "@/features/medicine/types";
+import { Item } from "@/features/cart/types";
 import { create } from "zustand";
 
 type CartStore = {
-  items: Medicine[];
-  addItem: (item: Medicine) => void;
+  items: Item[];
+  addItem: (item: Item) => void;
   clearCart: () => void;
   totalItems: () => number;
 };
