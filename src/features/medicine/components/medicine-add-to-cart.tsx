@@ -11,9 +11,10 @@ export default function MedicineAddToCart({
 }: MedicineAddToCartProps) {
   //   const [isAdded, setIsAdded] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
-
+  const items = useCartStore((state) => state.items);
+  console.log(items, "items");
   const handleAddToCart = async () => {
-    addItem(medicine);
+    addItem({ ...medicine, quantity: medicine.quantity || 1 });
     // setIsAdded(true);
   };
   return (

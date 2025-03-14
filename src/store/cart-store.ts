@@ -13,7 +13,7 @@ type CartStore = {
 export const useCartStore = create<CartStore>((set, get) => ({
   items: [],
   addItem: (item) => {
-    const existingItem = get().items.find((item) => item.id === item.id);
+    const existingItem = get().items.find((i) => i.id === item.id);
 
     if (existingItem) {
       set((state) => ({
