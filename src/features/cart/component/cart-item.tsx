@@ -17,18 +17,18 @@ export default function CartItem({ item }: CartItemProps) {
             className="rounded-lg"
           />
         </div>
-        <div className="">
-          <h3 className="font-medium">{item.name}</h3>
-        </div>
+        <h3 className=" font-semibold">{item.name}</h3>
       </div>
       <Separator className="my-4" />
-      <div className="flex justify-between items-center ">
-        <div className="">تعداد کالا</div>
-        <div className="">{item.quantity} عدد</div>
+      <div className="flex justify-between items-center mb-1 ">
+        <span className="text-sm">تعداد کالا</span>
+        <span className="text-sm">{item.quantity} عدد</span>
       </div>
       <div className="flex justify-between items-center">
-        <div className="">قیمت</div>
-        <div className="text-gray-700">{item.price.toLocaleString()} تومان</div>
+        <span className="text-sm">قیمت</span>
+        <span className="text-sm text-muted-foreground/80">
+          {item.price.toLocaleString()} تومان
+        </span>
       </div>
     </div>
   );

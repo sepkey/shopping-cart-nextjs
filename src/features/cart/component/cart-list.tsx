@@ -33,7 +33,7 @@ export default function CartList() {
 
       <Separator className="mt-8" />
       <div className="flex justify-between items-center ">
-        <div className="">جمع کل</div>
+        <div className="font-bold">جمع کل</div>
         <div className="">{totalPrice().toLocaleString()} تومان</div>
       </div>
     </div>

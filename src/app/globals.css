@@ -43,6 +43,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --text-base: 0.9rem;
 }
 @theme {
   --animate-cta-from-bottom: cta-from-bottom 0.5s ease-in-out;

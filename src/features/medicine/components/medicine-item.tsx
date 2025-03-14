@@ -19,8 +19,8 @@ export default function MedicineItem({ medicine }: MedicineCardProps) {
           height={80}
           className="rounded-lg ml-4"
         />
-        <div className=" flex flex-col justify-between ">
-          <h3 className="font-bold">{medicine.name}</h3>
+        <div className=" flex flex-col justify-between text-base">
+          <h3 className="font-bold text">{medicine.name}</h3>
           <p className="text-sm text-muted-foreground/70">
             {medicine.price.toLocaleString()} تومان
           </p>
