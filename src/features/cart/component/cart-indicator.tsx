@@ -13,7 +13,7 @@ export default function CartIndicator() {
   }
 
   return (
-    <div className="absolute top-2 left-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+    <div className="absolute top-2 left-3 bg-destructive text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs ">
       {items.length}
     </div>
   );

@@ -10,7 +10,7 @@ type MedicineCardProps = {
 
 export default function MedicineItem({ medicine }: MedicineCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-4 border border-zinc-300 flex justify-between items-center">
+    <div className="bg-white rounded-2xl p-4 border border-input flex justify-between items-center">
       <div className="flex">
         <Image
           src="/medicine.jpg"
@@ -19,11 +19,11 @@ export default function MedicineItem({ medicine }: MedicineCardProps) {
           height={80}
           className="rounded-lg ml-4"
         />
-        <div className=" flex flex-col justify-between">
-          <div className=" font-bold">{medicine.name}</div>
-          <div className="text-gray-600 text-sm">
+        <div className=" flex flex-col justify-between ">
+          <h3 className="font-bold">{medicine.name}</h3>
+          <p className="text-sm text-muted-foreground/70">
             {medicine.price.toLocaleString()} تومان
-          </div>
+          </p>
         </div>
       </div>
 

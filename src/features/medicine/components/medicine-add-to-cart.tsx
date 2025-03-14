@@ -24,14 +24,13 @@ export default function MedicineAddToCart({
   };
   return (
     <Button
-      size="sm"
+      // size="sm"
       variant="ghost"
       onClick={handleAddToCart}
-      className="text-indigo-800 font-semibold self-end"
-      //   disabled={isAdded}
+      className="text-primary font-semibold self-end "
     >
+      <Plus className="[&_svg]:size-6 " />
       افزودن
-      <Plus className="h-5 w-5" />
     </Button>
   );
 }

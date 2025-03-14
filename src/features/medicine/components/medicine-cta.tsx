@@ -11,7 +11,7 @@ export default function MedicineCta() {
 
   return (
     <div className="w-full max-w-[600px] flex flex-col mx-auto ">
-      <Button className="bg-indigo-800 p-2" asChild>
+      <Button className="bg-primary p-6 animate-cta-from-bottom" asChild>
         <Link href={cartPath()} className="text-lg">
           تکمیل خرید
         </Link>

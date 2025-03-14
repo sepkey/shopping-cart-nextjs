@@ -18,8 +18,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <NuqsAdapter>
           <Header />
 
-          <div className="flex h-screen overflow-hidden border-collapse">
-            <main className="min-h-screen flex-1 overflow-y-auto  overflow-x-hidden  py-24 px-8 flex flex-col bg-secondary/20">
+          <div className="flex h-screen overflow-hidden border-collapse ">
+            <main className="min-h-screen flex-1 overflow-y-auto  overflow-x-hidden  py-24 px-8 flex flex-col bg-muted text-muted-foreground">
               {children}
             </main>
           </div>

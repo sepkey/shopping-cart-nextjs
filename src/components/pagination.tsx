@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -37,6 +38,7 @@ export default function Pagination({
       size="icon"
       disabled={pagination.page <= 1}
       onClick={handlePreviousPage}
+      className="bg-muted border border-transparent shadow-transparent"
     >
       <ChevronRight />
     </Button>
@@ -46,6 +48,7 @@ export default function Pagination({
     <Button
       variant="outline"
       size="icon"
+      className="bg-muted border border-transparent shadow-transparent"
       disabled={!hasNextPage}
       onClick={handleNextPage}
     >
@@ -62,11 +65,12 @@ export default function Pagination({
           variant="outline"
           size="icon"
           onClick={() => handleSpecificPage(page)}
-          className={
-            pagination.page === page
-              ? " border-indigo-600 hover:border-indigo-900"
-              : ""
-          }
+          className={cn(
+            "bg-muted border border-transparent shadow-transparent transition-colors",
+            {
+              "border-secondary text-secondary": pagination.page === page,
+            }
+          )}
         >
           {page}
         </Button>
