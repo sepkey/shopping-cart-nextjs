@@ -18,7 +18,7 @@ export default function CartList() {
         label="سبد خرید شما خالی است"
         icon={<MessageSquareWarning />}
         button={
-          <Button asChild>
+          <Button asChild variant="outline">
             <Link href={homePath()}>بازگشت به فروشگاه</Link>
           </Button>
         }
@@ -32,9 +32,10 @@ export default function CartList() {
       ))}
 
       <Separator className="mt-8" />
-      <div className="flex justify-between items-center ">
-        <div className="font-bold">جمع کل</div>
-        <div className="">{totalPrice().toLocaleString()} تومان</div>
+
+      <div className="flex justify-between items-center font-bold">
+        <span>جمع کل</span>
+        <span>{totalPrice().toLocaleString()} تومان</span>
       </div>
     </div>
   );
