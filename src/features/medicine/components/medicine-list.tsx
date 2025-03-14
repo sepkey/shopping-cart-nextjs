@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { ParsedSearchParams } from "@/lib/search-params";
-import { cartPath } from "@/paths";
-import Link from "next/link";
 import { getMedicines } from "../actions/get-medicines";
 import MedicineItem from "./medicine-item";
 import MedicinePagination from "./medicine-pagination";
@@ -21,12 +18,6 @@ export default async function MedicineList({
       ))}
 
       <MedicinePagination paginatedTicketMetadata={metadata} />
-
-      <Button className="bg-indigo-800 p-2" asChild>
-        <Link href={cartPath()} className="text-lg">
-          تکمیل خرید
-        </Link>
-      </Button>
     </div>
   );
 }
