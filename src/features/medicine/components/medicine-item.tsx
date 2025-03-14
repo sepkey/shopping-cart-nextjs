@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import type { Medicine } from "../types";
 import MedicineAddToCart from "./medicine-add-to-cart";
@@ -9,6 +10,8 @@ type MedicineCardProps = {
 };
 
 export default function MedicineItem({ medicine }: MedicineCardProps) {
+  const t = useTranslations("medicine");
+
   return (
     <div className="bg-white rounded-2xl p-4 border border-input flex justify-between items-center">
       <div className="flex">
@@ -22,7 +25,7 @@ export default function MedicineItem({ medicine }: MedicineCardProps) {
         <div className=" flex flex-col justify-between text-base">
           <h3 className="font-bold text">{medicine.name}</h3>
           <p className="text-sm text-muted-foreground/70">
-            {medicine.price.toLocaleString()} تومان
+            {medicine.price.toLocaleString()} {t("toman")}
           </p>
         </div>
       </div>

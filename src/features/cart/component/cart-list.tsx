@@ -6,20 +6,22 @@ import { Separator } from "@/components/ui/separator";
 import { homePath } from "@/paths";
 import { useCartStore } from "@/store/cart-store";
 import { MessageSquareWarning } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import CartItem from "./cart-item";
 
 export default function CartList() {
   const { items, totalPrice } = useCartStore();
+  const t = useTranslations("cart");
 
   if (items.length === 0) {
     return (
       <Placeholder
-        label="سبد خرید شما خالی است"
+        label={t("placeholder_message")}
         icon={<MessageSquareWarning />}
         button={
           <Button asChild variant="outline">
-            <Link href={homePath()}>بازگشت به فروشگاه</Link>
+            <Link href={homePath()}>{t("back_to")}</Link>
           </Button>
         }
       />
@@ -34,8 +36,10 @@ export default function CartList() {
       <Separator className="mt-8" />
 
       <div className="flex justify-between items-center font-bold">
-        <span>جمع کل</span>
-        <span>{totalPrice().toLocaleString()} تومان</span>
+        <span>{t("total_prices")}</span>
+        <span>
+          {totalPrice().toLocaleString()} {t("toman")}
+        </span>
       </div>
     </div>
   );
