@@ -1,4 +1,4 @@
-import Header from "@/components/header";
+import Header from "@/app/_navigation/header";
 import { Inter } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { ReactNode } from "react";

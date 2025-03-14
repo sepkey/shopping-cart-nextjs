@@ -1,4 +1,4 @@
-import Spinner from "@/components/ui/spinner";
+import Spinner from "@/components/spinner";
 import MedicineCta from "@/features/medicine/components/medicine-cta";
 import MedicineList from "@/features/medicine/components/medicine-list";
 import { searchParamsCache } from "@/lib/search-params";
