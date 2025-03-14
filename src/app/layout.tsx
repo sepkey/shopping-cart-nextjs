@@ -1,10 +1,13 @@
 import Header from "@/app/_navigation/header";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { ReactNode } from "react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const myFont = localFont({
+  src: "../../public/fonts/Samim.woff2",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Medicine shop",
@@ -13,8 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={inter.className}>
+    <html lang="fa" dir="rtl" className={myFont.className}>
+      <body>
         <NuqsAdapter>
           <Header />
 
