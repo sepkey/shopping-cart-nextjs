@@ -9,7 +9,7 @@ type MedicineCardProps = {
   medicine: Medicine;
 };
 
-export default function MedicineCard({ medicine }: MedicineCardProps) {
+export default function MedicineItem({ medicine }: MedicineCardProps) {
   return (
     <div className="bg-white rounded-2xl p-4 border border-zinc-300 flex justify-between items-center">
       <div className="flex">
